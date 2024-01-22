@@ -9,15 +9,15 @@ namespace Classes
         {
             int[] array = { 1, 8, 14, -4, 0, 7 };
             
-            foreach (var item in array)
+            foreach (var item in array)                //выводим исходный массив
             {
                 Console.Write($"{item}\t");
             }
             Console.WriteLine();
 
-            Array.Reverse(array);
+            Array.Reverse(array);                      //реверс массива
             {
-                foreach (var item in array)
+                foreach (var item in array)            //опять вывод массива: точно такой же блок как выше (одинаковые блоки кода=дубликаты)
                 {
                     Console.Write($"{item}\t");
                 }
@@ -25,9 +25,11 @@ namespace Classes
                 Console.WriteLine();
             }
 
-            PrintArray(array);
+
+
+            PrintArray(array);         //описание метода (методы описываются обязательно в рамках класса) он же вызов самого метода=выполняемая операция
             
-            void PrintArray(int[] arr) {
+            void PrintArray(int[] arr) {      //описание метода. void = тип метода, который показывает, что ничего возвращаться не будет (return тоже не нужен)
                 foreach (var item in arr)
                 {
                     Console.Write($"{item}\t");
@@ -35,8 +37,19 @@ namespace Classes
 
                 Console.WriteLine();
             }
-            
-            
+
+
+
+            //тип_возвращаемого_значения НазваниеМетода (параметры)
+            {
+                // тело метода
+                //выполняемые операции
+                return результат; //возвращаемое значение (если есть)
+            }
+
+
+
+
             // -=================== Метод без параметров ===================-
             void MethodWithoutParameters()
             {
@@ -44,36 +57,68 @@ namespace Classes
             }
             
             
-            // -=================== Метод без возвращаемого значения ===================-
-            void PrintMessage(string message)
+            // -=================== Метод без возвращаемого значения ===================- но с параметрами
+            void PrintMessage(string message)                                           //=требование метода передать мне что-то
             {
                 Console.WriteLine(message);
             }
-            
-            
+
+
+            PrintMessage("Text"); //вызов метода уже требует строковый параметр 
+            PrintMessage(1); //так не годится, нужна конвертация
+
+            string tmp = "jhhkk"; //a вот так уже норм
+            PrintMessage(tmp);
+
+
+
+            // -=================== Метод с возвращаемым значением ===================-
+            string GetInfo()          //описание метода, а не его вызов!
+            {
+                ///...
+                return "Test";  //после return обязательно дб строка! 
+            }
+            string result = GetInfo();  //обычная операция присвоения. и вызов метода: нам нужно взять какое-то значение,которое мне отдаст этот метод, и поместитть его в переменную result 
+            Console.WriteLine(result);  //вывод на консоль: Test
+
+
+
+
             // -=================== Метод с параметрами по умолчанию ===================-
-            void DisplayGreeting(string greetingMessage, string name = "Гость")
+            void DisplayGreeting(string greetingMessage, string name = "Гость")   //когда будем вызывать метод, нужно чтобы на вход было передано 2 строки
             {
                 Console.WriteLine($"{greetingMessage}, {name}!");
             }
 
-            // -=================== Метод с переменным числом аргументов ===================-
-            int CalculateSum(params int[] numbers)
-            {
-                int sum = 0;
 
-                foreach (int num in numbers)
+            DisplayGreeting("Hello");          //вызов метода со вторым параметром по умолчанию
+            DisplayGreeting("Hello", " Alex"); //вызов метода, " Alex" можно было бы и не указывать - тогда бы подставился Гость по умолчанию, но раз он есть, то он главней
+
+            //сигнатура метода - это тип метода, его параметры, их количество
+
+
+
+
+
+            // -=================== Метод с переменным числом аргументов ===================-
+            int CalculateSum(params int[] numbers)     //тут массив параметров, их может быть сколь угодно. метод: посчитать сумму чисел, которые мы передаем
+            {
+                int sum = 0;  //инициализируем начальную сумму
+
+                foreach (int num in numbers)     //перебираем все элементы массива numbers, который придет к нам извне
                 {
                     sum += num;
                 }
-                return sum;
+                return sum;           //возвращаем посчитанную сумму
             }
             
-            int sum1 = CalculateSum(1, 2, 3, 4, 5);
-            int sum2 = CalculateSum(); // Пустой вызов
+            int sum1 = CalculateSum(1, 2, 3, 4, 5);     //вот первый вызов метода - нужно сложить числа от 1 до 5
+            int sum2 = CalculateSum(); // Пустой вызов   sum2 будет 0
 
             Console.WriteLine("Sum 1: " + sum1);
             Console.WriteLine("Sum 2: " + sum2);
+
+
             
             // -=================== Передача параметров ===================-
             // -=================== По значению
