@@ -93,51 +93,51 @@
 
 
 
-    /*
-        //Задание 3
-        //Создайте и заполните массив случайным числами и выведете максимальное, минимальное и среднее значение.
-        //Для генерации случайного числа используйте метод Random().
-        //Пусть будет возможность создавать массив произвольного размера.Пусть размер массива вводится с консоли.
-   */
+            /*
+            //Задание 3
+            //Создайте и заполните массив случайным числами и выведете максимальное, минимальное и среднее значение.
+            //Для генерации случайного числа используйте метод Random().
+            //Пусть будет возможность создавать массив произвольного размера.Пусть размер массива вводится с консоли.
+            */
 
 
-    Console.Write("Введите размер массива и увидите его целиком: ");
-    int arraySize = Convert.ToInt32(Console.ReadLine());  //задаем размер массива
+            Console.Write("Введите размер массива и увидите его целиком: ");
+            int arraySize = Convert.ToInt32(Console.ReadLine());  //задаем размер массива
 
-    int[] array = new int[arraySize];
+            int[] array = new int[arraySize];
 
             for (int i = 0; i<arraySize; i++)
             {
             array[i] = new Random().Next(1,100);     //рандомное число от 1 до 100
             }
 
-   int max = array[0];
-   int min = array[0];
-   int sum = 0;
+            int max = array[0];
+            int min = array[0];
+            int sum = 0;
 
-   for (int i = 0; i < arraySize; i++)
-   {
-       if (array[i] > max)
-       {
-        max = array[i];
-       }
-       if (array[i] < min)
-       {
-        min = array[i];
-       }
-       sum += array[i];
-   }
+            for (int i = 0; i < arraySize; i++)
+            {
+             if (array[i] > max)
+            {
+            max = array[i];
+            }
+            if (array[i] < min)
+            {
+            min = array[i];
+            }
+            sum += array[i];
+            }
 
-   for (int i = 0; i <= array.GetUpperBound(0); i++)
-   {
-    Console.WriteLine($"{array[i]} ");
-   }
+            for (int i = 0; i <= array.GetUpperBound(0); i++)
+            {
+            Console.WriteLine($"{array[i]} ");
+            }
 
-   int mid = (int)sum / arraySize;
+            int mid = (int)sum / arraySize;
 
-   Console.WriteLine($"Максимальное значение: {max}");
-   Console.WriteLine($"Минимальное значение: {min}");
-   Console.WriteLine($"Среднее значение: {mid}");
+            Console.WriteLine($"Максимальное значение: {max}");
+            Console.WriteLine($"Минимальное значение: {min}");
+            Console.WriteLine($"Среднее значение: {mid}");
 
 
 
