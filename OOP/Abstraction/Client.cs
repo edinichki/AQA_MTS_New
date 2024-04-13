@@ -1,4 +1,4 @@
-namespace Abstraction;
+﻿namespace Abstraction;
 
 public class Client
 {
@@ -6,7 +6,7 @@ public class Client
     public string PhoneNumber;
     public string Email;
 
-    public void Activate() {}
-    public void Pause() {}
-    public void Deactivate() {}
+    public void Activate() { }
+    public void Pause() { }
+    public void Deactivate() { }
 }
