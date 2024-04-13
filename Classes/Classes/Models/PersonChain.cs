@@ -5,7 +5,7 @@ public class PersonChain
     public string name;
     public int age;
 
-    public PersonChain() : this("Неизвестно") // первый конструктор
+    public PersonChain() : this("Неизвестно") // первый конструктор     (вызов конструктора из того же конструктора)
     {
     }
 

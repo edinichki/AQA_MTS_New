@@ -15,7 +15,7 @@ public class PersonThis
 
     public PersonThis(string name)
     {
-        this.name = name;
+        this.name = name;            //(уже так же названная) переменная name конкретно в этом кастомном микроклассе (который в {})
         age = 18;
     }
 
