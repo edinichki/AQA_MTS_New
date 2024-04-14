@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Abstraction", "OOP\Abstract
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inheritance", "OOP\Inheritance\Inheritance.csproj", "{05265FC3-3326-4C9B-BF13-5405EB8614EB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Encapsulation", "OOP\Encapsulation\Encapsulation.csproj", "{BD2E9312-FC3D-4358-B83B-FCDE44014B05}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{05265FC3-3326-4C9B-BF13-5405EB8614EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{05265FC3-3326-4C9B-BF13-5405EB8614EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{05265FC3-3326-4C9B-BF13-5405EB8614EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD2E9312-FC3D-4358-B83B-FCDE44014B05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD2E9312-FC3D-4358-B83B-FCDE44014B05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD2E9312-FC3D-4358-B83B-FCDE44014B05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD2E9312-FC3D-4358-B83B-FCDE44014B05}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
