@@ -1,4 +1,4 @@
-﻿namespace Delegate;
+﻿ namespace Delegate;
 
 public class PredicateExample
 {

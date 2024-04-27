@@ -9,8 +9,8 @@ public class ActionExamples
         Action simpleAction = () => Console.WriteLine("Hello World!!!");
         simpleAction();
 
-        // Action<in T1, in T2,....in T16>
-        Action<string> greetAction = name => Console.WriteLine($"Hello {name}");
+        // Action<in T1, in T2,....in T16>              //макс.кол-во входящих параметров - 16 
+        Action<string> greetAction = name => Console.WriteLine($"Hello {name}");  //присваиваем 1 входящий параметр name
         greetAction("John");
 
         Action<string, int> greetAction1 = (name, x) => Console.WriteLine($"Hello {name} {x}");

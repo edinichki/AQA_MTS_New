@@ -21,7 +21,7 @@ public class Lambda
 
     public void Example1()
     {
-        Message hello = () => Console.WriteLine("Hello");
+        Message hello = () => Console.WriteLine("Hello");  //создает анонимную функцию без параметров => пишем что хотим выполнить
         hello();
         hello();
 
@@ -32,7 +32,7 @@ public class Lambda
         };
         hello1();
 
-        var hello2 = () => Console.WriteLine("Hello");
+        var hello2 = () => Console.WriteLine("Hello");  //неявная типизация с var
         hello2();
     }
 
